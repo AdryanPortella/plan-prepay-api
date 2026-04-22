@@ -47,6 +47,8 @@ export const init = async (sequelize: Sequelize, toQuery: Function) => {
     {
       sequelize,
       modelName: "user",
+      tableName: "users",
+      timestamps: false,
     },
   );
   UserModel.toQuery = toQuery.bind(UserModel, "user");
